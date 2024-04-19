@@ -1,3 +1,6 @@
+function startGame() {
+    document.getElementById('game').style.visibility = 'visible';
+}
 $(function() {
     // Array of words for the game
     let words = ['Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Dwarf', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kent', 'Krobus', 'Leo', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Sandy', 'Vincent', 'Willy', 'Wizard', 'Birdie', 'Gil', 'Governor', 'Grandpa', 'Gunther', 'Marlon', 'Morris']
@@ -12,7 +15,7 @@ $(function() {
         $('#word-container').append('<div class="hidden-letter">_</div>');
     }
 
-    // Function to update the diaplay of the guessed letters
+    // Function to update the display of the guessed letters
     function updateGuesses() {
         $('#guess-container').empty()
         $('#guess-container').text("Guessed Letters: " + guessedLetters.join(", "));
@@ -35,7 +38,7 @@ $(function() {
         checkGameStatus()
     }
 
-    // FUnction to check if the game as been won or lost
+    // Function to check if the game as been won or lost
     function checkGameStatus() {
         if($('.hidden-letter:contains("_")').length === 0) {
             alert('Congratulations! You Won!')
@@ -76,3 +79,7 @@ $(function() {
     // Initial display of remaining guesses
     $('#remaining-guesses').text("Remaining Guesses: " + remainingGuesses)
 })
+
+// Design settings menu
+// with difficulty and background changes
+// Design animation

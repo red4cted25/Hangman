@@ -1,0 +1,60 @@
+@font-face {
+    font-family: stardew;
+    src: url(../assets/Stardew_Valley.ttf);
+}
+@font-face {
+    font-family: stardew-caps;
+    src: url(../assets/Stardew\ Valley\ ALL\ CAPS.ttf);
+}
+body {
+    margin-top: 10vh;
+    background-image: url("https://stardewvalleywiki.com/mediawiki/extensions/StardewValley/images/stardewbackground.png");
+    background-size: cover;
+    color: #a1432b;
+    font-family: stardew-caps, Georgia, serif;
+    .hidden-letter {
+        display: inline-block;
+        width: 20px;
+        margin: 5px;
+        font-size: 24px;
+    }
+    .guessed-letters {
+        margin-top: 20px;
+    }
+    .box {
+        background-color: #DDA059;
+        border: #6B3710 solid 8px;
+        margin: auto;
+    }
+    #menu {
+        #title {
+            width: 20vw;
+            height: 20vh;
+            flex-direction: column;
+            h1 {
+                margin: 2vh 0 0 0;
+                font-size: 300%;
+            }
+        }
+        .box {
+            display: flex;
+            width: 10vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .start {
+            position: relative;
+            top: 20vh;
+            display: flex;
+            justify-content: space-between;
+            font-size: 150%;
+            .box {
+                height: 20vh;
+                flex-direction: column;
+            }
+        }
+    }
+    #game {
+        visibility: hidden;
+    }
+}
