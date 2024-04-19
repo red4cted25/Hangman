@@ -1,0 +1,26 @@
+@font-face {
+    font-family: stardew;
+    src: url(../assets/Stardew_Valley.ttf);
+}
+@font-face {
+    font-family: stardew-caps;
+    src: url(../assets/Stardew\ Valley\ ALL\ CAPS.ttf);
+}
+body {
+    background-image: url("https://stardewvalleywiki.com/mediawiki/extensions/StardewValley/images/stardewbackground.png");
+    background-size: cover;
+    h1 {
+        color: #a1432b;
+    }
+    color: #000;
+    font-family: stardew-caps, Georgia, serif;
+    .hidden-letter {
+        display: inline-block;
+        width: 20px;
+        margin: 5px;
+        font-size: 24px;
+    }
+    .guessed-letters {
+        margin-top: 20px;
+    }
+}
