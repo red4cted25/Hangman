@@ -1,5 +1,7 @@
 function startGame() {
     document.getElementById('game').style.visibility = 'visible';
+    document.getElementById('start').style.visibility = 'hidden';
+    document.getElementById('title').style.visibility = 'hidden';
 }
 $(function() {
     // Array of words for the game
