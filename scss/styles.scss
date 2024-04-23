@@ -1,17 +1,11 @@
-@font-face {
-    font-family: stardew;
-    src: url(../assets/Stardew_Valley.ttf);
-}
-@font-face {
-    font-family: stardew-caps;
-    src: url(../assets/Stardew\ Valley\ ALL\ CAPS.ttf);
-}
+@import "./partials/_variables.scss";
 body {
     background-image: url("https://stardewvalleywiki.com/mediawiki/extensions/StardewValley/images/stardewbackground.png");
     background-size: cover;
-    margin-top: 10vh;
+    margin-top: 5vh;
     color: #a1432b;
     font-family: stardew-caps, Georgia, serif;
+    overflow-y: hidden;
     .hidden-letter {
         display: inline-block;
         width: 20px;
@@ -31,10 +25,6 @@ body {
     }
     #menu {
         #title {
-            img {
-                display: flex;
-                justify-content: center;
-            }
             .box {
                 position: relative;
                     top: -5vh;
@@ -53,8 +43,8 @@ body {
             justify-content: center;
         }
         #start {
-            position: relative;
-            top: 20vh;
+            // position: relative;
+            //     top: -5vh;
             display: flex;
             justify-content: space-between;
             font-size: 150%;
@@ -62,13 +52,26 @@ body {
                 height: 20vh;
                 flex-direction: column;
             }
-            // #settings {
-            //     background-image: url(../assets/settings.png);
-            // }
         }
     }
     #game {
         visibility: hidden;
+        @if(visibility:hidden){
+                height: 0vh;
+                width: 0vw;
+                position: static;
+        }
+        position: absolute;
+            top: 0;
+            left: 35%;
+        margin: auto;
+        #screen {
+            margin-top: 5vh;
+            height: 50vh;
+        }
+        #word {
+            margin-top: 5vh;
+        }
         .box {
             display: flex;
             width: 25vw;
@@ -81,7 +84,7 @@ body {
         background-color: rgba($color: #3d3d3d, $alpha: .5);
         border-radius: 15px;
         color: white;
-        margin: auto;
+        margin: 5vh auto auto auto;
         text-align: center;
     }
 }
