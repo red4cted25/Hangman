@@ -32,6 +32,11 @@ body .box {
   margin: auto;
   font-weight: bolder;
 }
+body #menu #title #logo {
+  position: relative;
+  left: 25vw;
+  top: -1vh;
+}
 body #menu #title .box {
   position: relative;
   top: -5vh;
@@ -68,8 +73,18 @@ body #game {
   margin: auto;
 }
 body #game #screen {
-  margin-top: 5vh;
-  height: 50vh;
+  margin-top: 15vh;
+  height: 40vh;
+}
+body #game #screen #junimos img {
+  height: 50px;
+  width: 50px;
+}
+body #game #screen #crops {
+  display: flex;
+  position: relative;
+  top: 30%;
+  gap: 0.5vw;
 }
 body #game #word {
   margin-top: 5vh;
