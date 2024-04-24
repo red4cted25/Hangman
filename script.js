@@ -3,6 +3,7 @@ function startGame() {
     document.getElementById('start').style.visibility = 'hidden';
     document.getElementById('title').style.visibility = 'hidden';
 }
+let junimoMarchCount = 0;
 
 $(document).ready(function(){
     //Array of words for the game
@@ -13,7 +14,7 @@ $(document).ready(function(){
     var guessedLetters= []
     var remainingGuesses = 6
 
-    // Display underscores for each letter of the chose word
+    // Display underscores for each letter of the chosen word
     for(var i=0;i< chosenWord.length;i++){
         $('#word-container').append('<div class="hidden-letter">_</div>')
     }
@@ -21,9 +22,7 @@ $(document).ready(function(){
     //Function to update the display of the guessed letters
     function updateGuesses(){
         $('#guess-container').empty()
-        if(chosenWord.toLowerCase()[index] != letter){
-            $('#guess-container').text("Guessed Letters: " + guessedLetters.join(', '))
-        }
+        $('#guess-container').text("Guessed Letters: " + guessedLetters.join(', '))
     }
 
     //Function to check if the guess letter is in the chosen word
@@ -31,6 +30,7 @@ $(document).ready(function(){
         if(chosenWord.toLowerCase().indexOf(letter) === -1){
             remainingGuesses--
             $('#remaining-guesses').text("Remaining Guesses: " + remainingGuesses)
+            junimoMarch()
         }else {
             //Reveal the guessed letter
             $('.hidden-letter').each(function(index){
@@ -46,10 +46,10 @@ $(document).ready(function(){
     //function to check if the game has been won or lost
     function checkGameStatus(){
         if($('.hidden-letter:contains("_")').length ===0){
-            alert('Congratulations You Won')
+            setTimeout(alert.bind(null, 'Congratulations! You Won!'));
             resetGame()
         }else if(remainingGuesses === 0){
-            alert("You suck the word was: " + chosenWord)
+            setTimeout(alert.bind(null, "You Lose! Try Again! The Word Was: " + chosenWord));
             resetGame()
         }
     }
@@ -83,6 +83,16 @@ $(document).ready(function(){
 
     // Initial display of remaining guesses
     $('#remaining-guesses').text('Remaining Guesses: ' + remainingGuesses);
+    function junimoMarch() {
+        junimoMarchCount++;
+        if(junimoMarchCount == 1) {
+            $('#junimo-1').style.visibility = "visible";
+            $('#junimo-1').hide().fadeTo(1000, 1)
+            $('#junimo-1').animate({
+                "top": ""
+            })
+        }
+    }
 })
 
 // Design settings menu

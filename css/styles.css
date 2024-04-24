@@ -34,7 +34,7 @@ body .box {
 }
 body #menu #title #logo {
   position: relative;
-  left: 25vw;
+  left: 31%;
   top: -1vh;
 }
 body #menu #title .box {
@@ -45,7 +45,7 @@ body #menu #title .box {
 }
 body #menu #title .box h1 {
   margin: 2vh 0 0 0;
-  font-size: 300%;
+  font-size: 2.75vw;
 }
 body #menu .box {
   display: flex;
@@ -56,7 +56,7 @@ body #menu .box {
 body #menu #start {
   display: flex;
   justify-content: space-between;
-  font-size: 150%;
+  font-size: 1.5vw;
 }
 body #menu #start .box {
   height: 20vh;
@@ -75,10 +75,28 @@ body #game {
 body #game #screen {
   margin-top: 15vh;
   height: 40vh;
+  display: flex;
+  align-items: center;
 }
 body #game #screen #junimos img {
   height: 50px;
   width: 50px;
+  position: absolute;
+}
+body #game #screen #junimos #junimo-1 {
+  visibility: hidden;
+}
+body #game #screen #junimos #junimo-2 {
+  visibility: hidden;
+}
+body #game #screen #junimos #junimo-3 {
+  visibility: hidden;
+}
+body #game #screen #junimos #junimo-4 {
+  visibility: hidden;
+}
+body #game #screen #junimos #junimo-5 {
+  visibility: hidden;
 }
 body #game #screen #crops {
   display: flex;
@@ -87,7 +105,24 @@ body #game #screen #crops {
   gap: 0.5vw;
 }
 body #game #word {
-  margin-top: 5vh;
+  position: relative;
+  top: 5vh;
+  left: 90%;
+  font-size: 1vw;
+}
+body #game #word #reset-button {
+  background-color: #F7D78E;
+  -o-border-image: url(../assets/stardewborder.png) 30;
+     border-image: url(../assets/stardewborder.png) 30;
+  border-style: solid;
+  border-width: 2vw;
+  margin: auto;
+  font-weight: bolder;
+  color: #a1432b;
+}
+body #game #word #reset-button:hover {
+  background-color: #dfc27e;
+  cursor: pointer;
 }
 body #game .box {
   display: flex;
@@ -100,6 +135,9 @@ body p {
   background-color: rgba(61, 61, 61, 0.5);
   border-radius: 15px;
   color: white;
-  margin: 5vh auto auto auto;
+  margin: 9vh auto auto auto;
   text-align: center;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
 }/*# sourceMappingURL=styles.css.map */

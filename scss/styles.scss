@@ -28,8 +28,8 @@ body {
         #title {
             #logo{
                 position: relative;
-                left: 25vw;
-                top: -1vh;
+                    left: 31%;
+                    top: -1vh;
             }
             .box {
                     position: relative;
@@ -38,7 +38,7 @@ body {
                 height: 10vh;
                 h1 {
                     margin: 2vh 0 0 0;
-                    font-size: 300%;
+                    font-size: 2.75vw;
                 }
             }
         }
@@ -51,7 +51,7 @@ body {
         #start {
             display: flex;
             justify-content: space-between;
-            font-size: 150%;
+            font-size: 1.5vw;
             .box {
                 height: 20vh;
                 flex-direction: column;
@@ -72,10 +72,28 @@ body {
         #screen {
             margin-top: 15vh;
             height: 40vh;
+            display: flex;
+            align-items: center;
             #junimos {
                 img {
                     height: 50px;
                     width: 50px;
+                    position: absolute;
+                }
+                #junimo-1 {
+                    visibility: hidden;
+                }
+                #junimo-2 {
+                    visibility: hidden;
+                }
+                #junimo-3 {
+                    visibility: hidden;
+                }
+                #junimo-4 {
+                    visibility: hidden;
+                }
+                #junimo-5 {
+                    visibility: hidden;
                 }
             }
             #crops {
@@ -86,7 +104,23 @@ body {
             }
         }
         #word {
-            margin-top: 5vh;
+            position: relative;
+            top: 5vh;
+            left: 90%;
+            font-size: 1vw;
+            #reset-button {
+                background-color: #F7D78E;
+                border-image: url(../assets/stardewborder.png) 30;
+                border-style: solid;
+                border-width: 2vw;
+                margin: auto;
+                font-weight: bolder;
+                color: #a1432b;
+                &:hover {
+                    background-color: #dfc27e;
+                    cursor: pointer;
+                }
+            }
         }
         .box {
             display: flex;
@@ -100,7 +134,9 @@ body {
         background-color: rgba($color: #3d3d3d, $alpha: .5);
         border-radius: 15px;
         color: white;
-        margin: 5vh auto auto auto;
+        margin: 9vh auto auto auto;
         text-align: center;
+        width: max-content;
+        padding: 5px;
     }
 }
