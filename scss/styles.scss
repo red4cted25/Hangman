@@ -58,7 +58,7 @@ body {
             }
         }
     }
-    #game {
+    #game, #settings-panel {
         visibility: hidden;
         @if(visibility:hidden){
                 height: 0vh;
@@ -70,7 +70,7 @@ body {
             left: 35%;
         margin: auto;
         #screen {
-            margin-top: 15vh;
+            margin-top: 10vh;
             height: 40vh;
             display: flex;
             align-items: center;
@@ -82,18 +82,23 @@ body {
                 }
                 #junimo-1 {
                     visibility: hidden;
+                    left: 30%;
                 }
                 #junimo-2 {
                     visibility: hidden;
+                    left: 35%;
                 }
                 #junimo-3 {
                     visibility: hidden;
+                    left: 40%;
                 }
                 #junimo-4 {
                     visibility: hidden;
+                    left: 45%;
                 }
                 #junimo-5 {
                     visibility: hidden;
+                    left: 50%;
                 }
             }
             #crops {

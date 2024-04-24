@@ -3,7 +3,6 @@ function startGame() {
     document.getElementById('start').style.visibility = 'hidden';
     document.getElementById('title').style.visibility = 'hidden';
 }
-let junimoMarchCount = 0;
 
 $(document).ready(function(){
     //Array of words for the game
@@ -12,7 +11,8 @@ $(document).ready(function(){
     //Choose random word using index
     var chosenWord = words[Math.floor(Math.random()*words.length)]
     var guessedLetters= []
-    var remainingGuesses = 6
+    var remainingGuesses = 5
+    var junimoMarchCount = 0;
 
     // Display underscores for each letter of the chosen word
     for(var i=0;i< chosenWord.length;i++){
@@ -30,7 +30,8 @@ $(document).ready(function(){
         if(chosenWord.toLowerCase().indexOf(letter) === -1){
             remainingGuesses--
             $('#remaining-guesses').text("Remaining Guesses: " + remainingGuesses)
-            junimoMarch()
+            // junimoMarch()
+            cropFade()
         }else {
             //Reveal the guessed letter
             $('.hidden-letter').each(function(index){
@@ -58,6 +59,12 @@ $(document).ready(function(){
     function resetGame(){
         guessedLetters = []
         remainingGuesses = 6
+        junimoMarchCount = 0
+        $('#crop-1').fadeTo(1, 1)
+        $('#crop-2').fadeTo(1, 1)
+        $('#crop-3').fadeTo(1, 1)
+        $('#crop-4').fadeTo(1, 1)
+        $('#crop-5').fadeTo(1, 1)
         $('#remaining-guesses').text('Remaining Guesses: '+ remainingGuesses)
         $('#word-container').empty()
         chosenWord = words[Math.floor(Math.random() * words.length)];
@@ -83,14 +90,32 @@ $(document).ready(function(){
 
     // Initial display of remaining guesses
     $('#remaining-guesses').text('Remaining Guesses: ' + remainingGuesses);
-    function junimoMarch() {
+    // function junimoMarch() {
+    //     junimoMarchCount++;
+    //     if(junimoMarchCount == 1) {
+    //         $('#junimo-1').style.visibility = "visible";
+    //         $('#junimo-1').hide().fadeTo(1000, 1)
+    //         $('#junimo-1').animate({
+    //             "top": "40%",
+    //         })
+    //     }
+    // }
+    function cropFade() {
         junimoMarchCount++;
         if(junimoMarchCount == 1) {
-            $('#junimo-1').style.visibility = "visible";
-            $('#junimo-1').hide().fadeTo(1000, 1)
-            $('#junimo-1').animate({
-                "top": ""
-            })
+            $('#crop-1').fadeTo(1000, 0)
+        }
+        if(junimoMarchCount == 2) {
+            $('#crop-2').fadeTo(1000, 0)
+        }
+        if(junimoMarchCount == 3) {
+            $('#crop-3').fadeTo(1000, 0)
+        }
+        if(junimoMarchCount == 4) {
+            $('#crop-4').fadeTo(1000, 0)
+        }
+        if(junimoMarchCount == 5) {
+            $('#crop-5').fadeTo(1000, 0)
         }
     }
 })
