@@ -18,7 +18,7 @@
             </div>
         </div>
         <div id="start">
-            <div class="box" id="settings">
+            <div class="box" id="settings" onclick="setSettings()">
                 <h2>Settings</h2>
                 <img src="./assets/rusty_cog.png" alt="settings icon">
             </div>
@@ -30,7 +30,15 @@
     </div>
     <div id="settings-panel">
         <div class="box" id="screen">
-            
+            <h1>Difficulty</h1>
+            <div>
+                <button id="easy" onclick="checkDifficulty('easy')">Easy</button>
+                <button id="medium" onclick="checkDifficulty('medium')">Medium</button>
+                <button id="hard" onclick="checkDifficulty('hard')">Hard</button>
+            </div>
+        </div>
+        <div class="box" id="home">
+            <button id="home-button" onclick="goHome()">Home</button>
         </div>
     </div>
     <div id="game">

@@ -107,13 +107,16 @@ body {
                     top: 30%;
                 gap: .5vw;
             }
+            
         }
-        #word {
+        #word, #home {
             position: relative;
             top: 5vh;
             left: 90%;
             font-size: 1vw;
-            #reset-button {
+            #reset-button, #home-button {
+                font-family: inherit;
+                font-size: 1.5vw;
                 background-color: #F7D78E;
                 border-image: url(../assets/stardewborder.png) 30;
                 border-style: solid;
@@ -132,6 +135,43 @@ body {
             width: 25vw;
             flex-direction: column;
             justify-content: center;
+        }
+    }
+    #settings-panel {
+        button {
+            font-family: inherit;
+            font-size: 1.5vw;
+            background-color: #F7D78E;
+            border-image: url(../assets/stardewborder.png) 30;
+            border-style: solid;
+            border-width: 2vw;
+            margin: auto;
+            font-weight: bolder;
+            color: #a1432b;
+        }
+        div {
+            display: flex;
+        }
+        #easy {
+            background-color: #4fbe4f;
+            &:hover {
+                background-color: #409440;
+                cursor: pointer;
+            }
+        }
+        #medium {
+            background-color: #beaa4f;
+            &:hover {
+                background-color: #998940;
+                cursor: pointer;
+            }
+        }
+        #hard {
+            background-color: #be4f4f;
+            &:hover {
+                background-color: #943e3e;
+                cursor: pointer;
+            }
         }
     }
     p {

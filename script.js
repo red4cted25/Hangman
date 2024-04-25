@@ -3,11 +3,42 @@ function startGame() {
     document.getElementById('start').style.visibility = 'hidden';
     document.getElementById('title').style.visibility = 'hidden';
 }
+function setSettings() {
+    document.getElementById('settings-panel').style.visibility = 'visible';
+    document.getElementById('start').style.visibility = 'hidden';
+    document.getElementById('title').style.visibility = 'hidden';
+}
+
+function goHome() {
+    document.getElementById('game').style.visibility = 'hidden';
+    document.getElementById('settings-panel').style.visibility = 'hidden';
+    document.getElementById('start').style.visibility = 'visible';
+    document.getElementById('title').style.visibility = 'visible';
+}
 
 $(document).ready(function(){
-    //Array of words for the game
-    var words = ['Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Dwarf', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kent', 'Krobus', 'Leo', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Sandy', 'Vincent', 'Willy', 'Wizard', 'Birdie', 'Gil', 'Governor', 'Grandpa', 'Gunther', 'Marlon', 'Morris']
-
+    let words = [];
+    checkDifficulty();
+    function checkDifficulty(difficulty) {
+        switch (difficulty) {
+            case 'easy':
+                level = difficulty
+                words.push('crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'hops');
+                break
+            case 'medium':
+                level = difficulty
+                words.push('forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash');
+                break
+            case 'hard':
+                level = difficulty
+                words.push('Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Dwarf', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kent', 'Krobus', 'Leo', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Sandy', 'Vincent', 'Willy', 'Wizard', 'Birdie', 'Gil', 'Governor', 'Grandpa', 'Gunther', 'Marlon', 'Morris', 'crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash', 'starfruit', 'cabbage', 'radish', 'strawberry', 'hops', 'cauliflower', 'pumpkin', 'powdermelon', 'ancient',  'tea', 'pineapple');
+                break
+            default:
+                level = 'medium';
+                words.push('forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash');
+                break
+        }
+    }
     //Choose random word using index
     var chosenWord = words[Math.floor(Math.random()*words.length)]
     var guessedLetters= []
@@ -58,7 +89,7 @@ $(document).ready(function(){
     //Function to reset the game
     function resetGame(){
         guessedLetters = []
-        remainingGuesses = 6
+        remainingGuesses = 5
         junimoMarchCount = 0
         $('#crop-1').fadeTo(1, 1)
         $('#crop-2').fadeTo(1, 1)

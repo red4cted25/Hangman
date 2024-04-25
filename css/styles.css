@@ -109,13 +109,15 @@ body #game #screen #crops, body #settings-panel #screen #crops {
   top: 30%;
   gap: 0.5vw;
 }
-body #game #word, body #settings-panel #word {
+body #game #word, body #game #home, body #settings-panel #word, body #settings-panel #home {
   position: relative;
   top: 5vh;
   left: 90%;
   font-size: 1vw;
 }
-body #game #word #reset-button, body #settings-panel #word #reset-button {
+body #game #word #reset-button, body #game #word #home-button, body #game #home #reset-button, body #game #home #home-button, body #settings-panel #word #reset-button, body #settings-panel #word #home-button, body #settings-panel #home #reset-button, body #settings-panel #home #home-button {
+  font-family: inherit;
+  font-size: 1.5vw;
   background-color: #F7D78E;
   -o-border-image: url(../assets/stardewborder.png) 30;
      border-image: url(../assets/stardewborder.png) 30;
@@ -125,7 +127,7 @@ body #game #word #reset-button, body #settings-panel #word #reset-button {
   font-weight: bolder;
   color: #a1432b;
 }
-body #game #word #reset-button:hover, body #settings-panel #word #reset-button:hover {
+body #game #word #reset-button:hover, body #game #word #home-button:hover, body #game #home #reset-button:hover, body #game #home #home-button:hover, body #settings-panel #word #reset-button:hover, body #settings-panel #word #home-button:hover, body #settings-panel #home #reset-button:hover, body #settings-panel #home #home-button:hover {
   background-color: #dfc27e;
   cursor: pointer;
 }
@@ -134,6 +136,42 @@ body #game .box, body #settings-panel .box {
   width: 25vw;
   flex-direction: column;
   justify-content: center;
+}
+body #settings-panel button {
+  font-family: inherit;
+  font-size: 1.5vw;
+  background-color: #F7D78E;
+  -o-border-image: url(../assets/stardewborder.png) 30;
+     border-image: url(../assets/stardewborder.png) 30;
+  border-style: solid;
+  border-width: 2vw;
+  margin: auto;
+  font-weight: bolder;
+  color: #a1432b;
+}
+body #settings-panel div {
+  display: flex;
+}
+body #settings-panel #easy {
+  background-color: #4fbe4f;
+}
+body #settings-panel #easy:hover {
+  background-color: #409440;
+  cursor: pointer;
+}
+body #settings-panel #medium {
+  background-color: #beaa4f;
+}
+body #settings-panel #medium:hover {
+  background-color: #998940;
+  cursor: pointer;
+}
+body #settings-panel #hard {
+  background-color: #be4f4f;
+}
+body #settings-panel #hard:hover {
+  background-color: #943e3e;
+  cursor: pointer;
 }
 body p {
   font-family: Georgia, "Times New Roman", Times, serif;
