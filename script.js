@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    let words = [];
-    let chosenWord;
+    var words = ['Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Dwarf', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kent', 'Krobus', 'Leo', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Sandy', 'Vincent', 'Willy', 'Wizard', 'Birdie', 'Gil', 'Governor', 'Grandpa', 'Gunther', 'Marlon', 'Morris', 'crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash', 'starfruit', 'cabbage', 'radish', 'strawberry', 'hops', 'cauliflower', 'pumpkin', 'powdermelon', 'ancient',  'tea', 'pineapple'];
+    // let chosenWord;
     $("#play").click(function(){
         startGame();
     });
@@ -27,28 +27,29 @@ $(document).ready(function(){
         document.getElementById('start').style.visibility = 'visible';
         document.getElementById('title').style.visibility = 'visible';
     }
-    $("#easy").click(function(){
-        checkDifficulty('easy');
-    });
-    $("#medium").click(function(){
-        checkDifficulty('medium')
-    });
-    $("#hard").click(function(){
-        checkDifficulty('hard')
-    });
-    function checkDifficulty(difficulty) {
-        words = [];
-        if(difficulty == 'easy') {
-            words.push('crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'hops');
-        } else if(difficulty == 'medium') {
-            words.push('forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash');
-        } else {
-            words.push('Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Dwarf', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kent', 'Krobus', 'Leo', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Sandy', 'Vincent', 'Willy', 'Wizard', 'Birdie', 'Gil', 'Governor', 'Grandpa', 'Gunther', 'Marlon', 'Morris', 'crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash', 'starfruit', 'cabbage', 'radish', 'strawberry', 'hops', 'cauliflower', 'pumpkin', 'powdermelon', 'ancient',  'tea', 'pineapple');
-        }
-        chosenWord = words[Math.floor(Math.random()*words.length)]
-    }
+    // $("#easy").click(function(){
+    //     checkDifficulty('easy');
+    // });
+    // $("#medium").click(function(){
+    //     checkDifficulty('medium')
+    // });
+    // $("#hard").click(function(){
+    //     checkDifficulty('hard')
+    // });
+    // function checkDifficulty(difficulty) {
+    //     words = [];
+    //     if(difficulty == 'easy') {
+    //         words.push('crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'hops');
+    //     } else if(difficulty == 'medium') {
+    //         words.push('forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash');
+    //     } else {
+    //         words.push('Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Dwarf', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kent', 'Krobus', 'Leo', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Sandy', 'Vincent', 'Willy', 'Wizard', 'Birdie', 'Gil', 'Governor', 'Grandpa', 'Gunther', 'Marlon', 'Morris', 'crop', 'silo', 'shed', 'barn', 'pigs', 'coop', 'cows', 'fish', 'lake', 'bush', 'wine', 'seed', 'corn', 'star', 'fall', 'moon', 'luau', 'carp', 'frog', 'rain', 'mine', 'forest', 'oceans', 'houses', 'jewels', 'leaves', 'trunks', 'slimes', 'market', 'puddle', 'basket', 'summer', 'winter', 'autumn', 'melons', 'carrot', 'coffee', 'garlic', 'potato', 'pepper', 'squash', 'starfruit', 'cabbage', 'radish', 'strawberry', 'hops', 'cauliflower', 'pumpkin', 'powdermelon', 'ancient',  'tea', 'pineapple');
+    //     }
+    //     chosenWord = words[Math.floor(Math.random()*words.length)]
+    // }
     //Choose random word using index
     var guessedLetters= []
+    var chosenWord = words[Math.floor(Math.random()*words.length)]
     var remainingGuesses = 5
     var junimoMarchCount = 0;
 
